@@ -5,13 +5,14 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const { x, y } = useMousePosition();
+  const size = 40;
 
   return (
     <main className={styles.main}>
       <motion.div
         className={styles.mask}
         animate={{
-          WebkitMaskPosition: `${x}px ${y}px`,
+          WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
         }}
         transition={{
           type: "tween",
