@@ -1,6 +1,10 @@
+"use client";
 import styles from "@/app/page.module.css";
+import useMousePosition from "../app/utils/useMousePosition";
 
 export default function Home() {
+  const { x, y } = useMousePosition();
+
   return (
     <main className={styles.main}>
       <div className={styles.mask}>
