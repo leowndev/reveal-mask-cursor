@@ -13,6 +13,10 @@ export default function Home() {
         animate={{
           WebkitMaskPosition: `${x}px ${y}px`,
         }}
+        transition={{
+          type: "tween",
+          ease: "backOut",
+        }}
       >
         <p className={styles.p}>
           You are now visualizing the hidden text. It was hidden behind the
