@@ -1,17 +1,22 @@
 "use client";
-import styles from "@/app/page.module.css";
-import useMousePosition from "../app/utils/useMousePosition";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
+import styles from "@/app/page.module.css";
+import useMousePosition from "../app/utils/useMousePosition";
+
 export default function Home() {
+  const [isHovered, setIsHovered] = useState(false);
+
   const { x, y } = useMousePosition();
-  const size = 40;
+  const size = isHovered ? 400 : 40;
 
   return (
     <main className={styles.main}>
       <motion.div
         className={styles.mask}
         animate={{
+          WebkitMaskSize: `${size}px`,
           WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
         }}
         transition={{
@@ -19,7 +24,11 @@ export default function Home() {
           ease: "backOut",
         }}
       >
-        <p className={styles.p}>
+        <p
+          className={styles.p}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           You are now visualizing the hidden text. It was hidden behind the
           other paragraph.
         </p>
