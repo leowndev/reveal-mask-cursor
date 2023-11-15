@@ -29,15 +29,14 @@ export default function Home() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          You are now visualizing the hidden text. It was hidden behind the
-          other paragraph.
+          Now you are visualizing the hidden text 👀.
         </p>
       </motion.div>
 
       <div className={styles.body}>
         <p className={styles.p}>
-          I'm a <span className={styles.span}>visible text</span> if you hover
-          me you will see the hidden text behind me.
+          I'm a <span className={styles.span}>visible text</span>. Hover me to
+          see hidden the message.
         </p>
       </div>
     </main>
