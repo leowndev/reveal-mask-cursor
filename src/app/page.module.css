@@ -26,4 +26,9 @@
 
 .mask {
   position: absolute;
+  mask-image: url("../../public/assets/ellipse-mask.svg");
+  background-color: #ec4e39;
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+  color: #000;
 }
