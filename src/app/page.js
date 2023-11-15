@@ -12,8 +12,8 @@ export default function Home() {
 
       <div className={styles.body}>
         <p className={styles.p}>
-          I'm a <span className={styles.span}>visible text</span>
-          if you hover me you will see the hidden text behind me.
+          I'm a <span className={styles.span}>visible text</span> if you hover
+          me you will see the hidden text behind me.
         </p>
       </div>
     </main>
